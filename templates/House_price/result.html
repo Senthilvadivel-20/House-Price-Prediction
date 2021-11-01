@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <link rel="stylesheet" href="{% static '\House_price\css\result.css' %}">
+    <title>
+        House price 
+    </title>
+</head>
+
+<body>
+
+
+    <div class="main">
+
+    <h1>The predicted price</h1>
+
+    <p>{{price}} ₹</p>
+
+
+    <button><a href="{% url 'Home' %}">Back to Home</a></button>
+
+
+</div>
+
+</body>
+
+
+</html>

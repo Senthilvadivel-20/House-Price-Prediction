@@ -1,0 +1,467 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <link rel="stylesheet" href="{% static '\House_price\css\Home.css' %}">
+
+    <title>
+        Home
+    </title>
+</head>
+
+
+
+<body>
+
+    <h1>Chennai city House price prediction</h1>
+
+    <h2>Enter features what you want!</h2>
+
+    <form action="{% url 'result' %}" >
+
+        <label for="Location">Location:</label>
+        <select name="Location" id="Location">
+
+            <option value="200 Feet Radial Road">200 Feet Radial Road</option>
+            <option value="Abiramapuram">Abiramapuram</option>
+            <option value="Adambakkam">Adambakkam</option>
+            <option value="Adhanur">Adhanur</option>
+            <option value="Adyar">Adyar</option>
+            <option value="Agaramthen">Agaramthen</option>
+            <option value="Alandur">Alandur</option>
+            <option value="Alwarpet">Alwarpet</option>
+            <option value="Ambattur">Ambattur</option>
+            <option value="Ambattur INDUSTRIAL ESTATE">Ambattur INDUSTRIAL ESTATE</option>
+            <option value="Aminjikarai">Aminjikarai</option>
+            <option value="Anakaputhur">Anakaputhur</option>
+            <option value="Anna Nagar">Anna Nagar</option>
+            <option value="Anna Nagar East">Anna Nagar East</option>
+            <option value="Annamalai Colony">Annamalai Colony</option>
+            <option value="Annanagar">Annanagar</option>
+            <option value="Annanagar West">Annanagar West</option>
+            <option value="Arumbakkam">Arumbakkam</option>
+            <option value="Ashok Nagar">Ashok Nagar</option>
+            <option value="Avadi">Avadi</option>
+            <option value="Ayanambakkam">Ayanambakkam</option>
+            <option value="Ayanavaram">Ayanavaram</option>
+            <option value="Ayapakkam">Ayapakkam</option>
+            <option value="Bakthavatchalapuram">Bakthavatchalapuram</option>
+            <option value="Besant Nagar">Besant Nagar</option>
+            <option value="CIT Nagar">CIT Nagar</option>
+            <option value="Chembarambakkam">Chembarambakkam</option>
+            <option value="Chengalpattu">Chengalpattu</option>
+            <option value="Chetpet">Chetpet</option>
+            <option value="Chikkarayapuram">Chikkarayapuram</option>
+            <option value="Chitlapakkam">Chitlapakkam</option>
+            <option value="Cholambedu">Cholambedu</option>
+            <option value="Choolaimedu">Choolaimedu</option>
+            <option value="Chromepet">Chromepet</option>
+            <option value="East Tambaram">East Tambaram</option>
+            <option value="Egatoor">Egatoor</option>
+            <option value="Egattur">Egattur</option>
+            <option value="Egmore">Egmore</option>
+            <option value="Ekkatuthangal">Ekkatuthangal</option>
+            <option value="GST Road">GST Road</option>
+            <option value="Gerugambakkam">Gerugambakkam</option>
+            <option value="Gopalapuram">Gopalapuram</option>
+            <option value="Gowrivakkam">Gowrivakkam</option>
+            <option value="Guduvancheri">Guduvancheri</option>
+            <option value="Guindy">Guindy</option>
+            <option value="Injambakkam">Injambakkam</option>
+            <option value="Irandankattalai">Irandankattalai</option>
+            <option value="Irumbuliyur">Irumbuliyur</option>
+            <option value="Iyappanthangal">Iyappanthangal</option>
+            <option value="Iyyappanthangal">Iyyappanthangal</option>
+            <option value="Jamalia">Jamalia</option>
+            <option value="K K Nagar">K K Nagar</option>
+            <option value="Kanathur Reddikuppam">Kanathur Reddikuppam</option>
+            <option value="Karapakkam">Karapakkam</option>
+            <option value="Kattankulathur">Kattankulathur</option>
+            <option value="Kattupakkam">Kattupakkam</option>
+            <option value="Keelma Nagar">Keelma Nagar</option>
+            <option value="Kelambakkam">Kelambakkam</option>
+            <option value="Kil Ayanambakkam">Kil Ayanambakkam</option>
+            <option value="Kilkattalai">Kilkattalai</option>
+            <option value="Kilpauk">Kilpauk</option>
+            <option value="Kodambakkam">Kodambakkam</option>
+            <option value="Kolapakkam">Kolapakkam</option>
+            <option value="Kolathur">Kolathur</option>
+            <option value="Korattur">Korattur</option>
+            <option value="Kottivakkam">Kottivakkam</option>
+            <option value="Kotturpuram">Kotturpuram</option>
+            <option value="Kovilambakkam">Kovilambakkam</option>
+            <option value="Kovur">Kovur</option>
+            <option value="Koyambedu">Koyambedu</option>
+            <option value="Kumananchavadi">Kumananchavadi</option>
+            <option value="Kundrathur">Kundrathur</option>
+            <option value="Kuthambakkam">Kuthambakkam</option>
+            <option value="Madambakkam">Madambakkam</option>
+            <option value="Madhavaram">Madhavaram</option>
+            <option value="Madipakkam">Madipakkam</option>
+            <option value="Maduravoyal">Maduravoyal</option>
+            <option value="Mahindra World City">Mahindra World City</option>
+            <option value="Mambakkam">Mambakkam</option>
+            <option value="Manali">Manali</option>
+            <option value="Manapakkam">Manapakkam</option>
+            <option value="Mangadu">Mangadu</option>
+            <option value="Manikandan Nagar">Manikandan Nagar</option>
+            <option value="Mannivakkam">Mannivakkam</option>
+            <option value="Mappedu">Mappedu</option>
+            <option value="Maraimalai Nagar">Maraimalai Nagar</option>
+            <option value="Medavakkam">Medavakkam</option>
+            <option value="Mevalurkuppam">Mevalurkuppam</option>
+            <option value="Mogappair">Mogappair</option>
+            <option value="Mogappair East">Mogappair East</option>
+            <option value="Moolacheri">Moolacheri</option>
+            <option value="Moolakadai">Moolakadai</option>
+            <option value="Mudichur">Mudichur</option>
+            <option value="Mugalivakkam">Mugalivakkam</option>
+            <option value="Mylapore">Mylapore</option>
+            <option value="Nandambakkam">Nandambakkam</option>
+            <option value="Nandanam">Nandanam</option>
+            <option value="Nanganallur">Nanganallur</option>
+            <option value="Nanmangalam">Nanmangalam</option>
+            <option value="Navallur">Navallur</option>
+            <option value="NehruNagar">NehruNagar</option>
+            <option value="Nenmeli">Nenmeli</option>
+            <option value="Nungambakkam">Nungambakkam</option>
+            <option value="OMR Road">OMR Road</option>
+            <option value="Ottiyambakkam">Ottiyambakkam</option>
+            <option value="Padi">Padi</option>
+            <option value="Padur">Padur</option>
+            <option value="Palavakkam">Palavakkam</option>
+            <option value="Pallavaram">Pallavaram</option>
+            <option value="Pallikaranai">Pallikaranai</option>
+            <option value="Pallikaranai VGP Shanti Nagar">Pallikaranai VGP Shanti Nagar</option>
+            <option value="Pammal">Pammal</option>
+            <option value="Pazavanthangal">Pazavanthangal</option>
+            <option value="Peerakankaranai">Peerakankaranai</option>
+            <option value="Perambur">Perambur</option>
+            <option value="Periyapanicheri">Periyapanicheri</option>
+            <option value="Perumbakkam">Perumbakkam</option>
+            <option value="Perungalathur">Perungalathur</option>
+            <option value="Perungudi">Perungudi</option>
+            <option value="Ponneri">Ponneri</option>
+            <option value="Ponniammanmedu">Ponniammanmedu</option>
+            <option value="Poonamallee">Poonamallee</option>
+            <option value="Porur">Porur</option>
+            <option value="Pozhichalur">Pozhichalur</option>
+            <option value="Pudupakkam">Pudupakkam</option>
+            <option value="Purasaiwakkam">Purasaiwakkam</option>
+            <option value="Purasawalkam">Purasawalkam</option>
+            <option value="Puzhal">Puzhal</option>
+            <option value="Raja Annamalai Puram">Raja Annamalai Puram</option>
+            <option value="Rajakilpakkam">Rajakilpakkam</option>
+            <option value="Ramapuram">Ramapuram</option>
+            <option value="Ramavaram">Ramavaram</option>
+            <option value="Royapettah">Royapettah</option>
+            <option value="Royapuram">Royapuram</option>
+            <option value="Saidapet">Saidapet</option>
+            <option value="Selaiyur">Selaiyur</option>
+            <option value="Sembakkam">Sembakkam</option>
+            <option value="Semmancheri">Semmancheri</option>
+            <option value="Serapanacheri">Serapanacheri</option>
+            <option value="Shanthi Nagar">Shanthi Nagar</option>
+            <option value="Shenoy Nagar">Shenoy Nagar</option>
+            <option value="Sholinganallur">Sholinganallur</option>
+            <option value="Singaperumal Koil">Singaperumal Koil</option>
+            <option value="Siruseri">Siruseri</option>
+            <option value="Sithalapakkam">Sithalapakkam</option>
+            <option value="Sunnambu Kolathur S Kolathur">Sunnambu Kolathur S Kolathur</option>
+            <option value="T Nagar">T Nagar</option>
+            <option value="TNHB">TNHB</option>
+            <option value="Tambaram Sanatoruim">Tambaram Sanatoruim</option>
+            <option value="Teynampet">Teynampet</option>
+            <option value="Thaiyur">Thaiyur</option>
+            <option value="Thalambur">Thalambur</option>
+            <option value="Tharapakkam">Tharapakkam</option>
+            <option value="Thatchoor">Thatchoor</option>
+            <option value="Thirumazhisai">Thirumazhisai</option>
+            <option value="Thirumudivakkam">Thirumudivakkam</option>
+            <option value="Thirumullaivoyal">Thirumullaivoyal</option>
+            <option value="Thiruneermalai">Thiruneermalai</option>
+            <option value="Thiruvanmiyur">Thiruvanmiyur</option>
+            <option value="Thiruverkadu">Thiruverkadu</option>
+            <option value="Thiruvidandhai">Thiruvidandhai</option>
+            <option value="Thoraipakkam">Thoraipakkam</option>
+            <option value="Thoraipakkam OMR">Thoraipakkam OMR</option>
+            <option value="Tiruporur Near Kelambakkam">Tiruporur Near Kelambakkam</option>
+            <option value="Tiruvottiyur">Tiruvottiyur</option>
+            <option value="Tondiarpet">Tondiarpet</option>
+            <option value="Triplicane">Triplicane</option>
+            <option value="Ullagaram">Ullagaram</option>
+            <option value="Urapakkam">Urapakkam</option>
+            <option value="Vadapalani">Vadapalani</option>
+            <option value="Valasaravakkam">Valasaravakkam</option>
+            <option value="Vanagaram">Vanagaram</option>
+            <option value="Vandalur">Vandalur</option>
+            <option value="Velachery">Velachery</option>
+            <option value="Velappanchavadi">Velappanchavadi</option>
+            <option value="Vellakkal">Vellakkal</option>
+            <option value="Vengaivasal">Vengaivasal</option>
+            <option value="Vengambakkam">Vengambakkam</option>
+            <option value="Vettuvankani">Vettuvankani</option>
+            <option value="Villivakkam">Villivakkam</option>
+            <option value="Virugambakkam">Virugambakkam</option>
+            <option value="West Mambalam">West Mambalam</option>
+            <option value="West Tambaram">West Tambaram</option>
+            <option value="tambaram east">tambaram east</option>
+            <option value="tambaram west">tambaram west</option>
+
+        </select><br><br>
+
+
+
+        <label for="Area">Area:</label>
+        <input type="number" name="Area" id="Area" required><br><br>
+
+
+
+        <label for="No. of Bedrooms">No. of Bedrooms:</label>
+        <select name="No. of Bedrooms" id="No. of Bedrooms">
+
+            <option value=1>1</option>
+            <option value=2>2</option>
+            <option value=3>3</option>
+            <option value=4>4</option>
+            <option value=5>5</option>
+
+        </select>
+
+        <br><br>
+
+
+        <label for="Resale">Resale:</label>
+        <input type="hidden" name="Resale" value=0 />
+        <input type="checkbox" name="Resale" value=1 />
+
+
+
+        <label for="MaintenanceStaff">MaintenanceStaff:</label>
+        <input type="hidden" name="MaintenanceStaff" value=0 />
+        <input type="checkbox" name="MaintenanceStaff" value=1 />
+
+        <br><br>
+
+        <label for="Gymnasium">Gymnasium:</label>
+        <input type="hidden" name="Gymnasium" value=0 />
+        <input type="checkbox" name="Gymnasium" value=1 />
+
+
+
+        <label for="SwimmingPool">SwimmingPool:</label>
+        <input type="hidden" name="SwimmingPool" value=0 />
+        <input type="checkbox" name="SwimmingPool" value=1 />
+
+
+
+        <label for="LandscapedGardens">LandscapedGardens:</label>
+        <input type="hidden" name="LandscapedGardens" value=0 />
+        <input type="checkbox" name="LandscapedGardens" value=1 />
+
+        <br><br>
+
+        <label for="JoggingTrack">JoggingTrack:</label>
+        <input type="hidden" name="JoggingTrack" value=0 />
+        <input type="checkbox" name="JoggingTrack" value=1 />
+
+
+
+        <label for="RainWaterHarvesting">RainWaterHarvesting:</label>
+        <input type="hidden" name="RainWaterHarvesting" value=0 />
+        <input type="checkbox" name="RainWaterHarvesting" value=1 />
+
+
+
+        <label for="IndoorGames">IndoorGames:</label>
+        <input type="hidden" name="IndoorGames" value=0 />
+        <input type="checkbox" name="IndoorGames" value=1 />
+
+        <br><br>
+
+        <label for="ShoppingMall">ShoppingMall:</label>
+        <input type="hidden" name="ShoppingMall" value=0 />
+        <input type="checkbox" name="ShoppingMall" value=1 />
+
+
+
+        <label for="Intercom">Intercom:</label>
+        <input type="hidden" name="Intercom" value=0 />
+        <input type="checkbox" name="Intercom" value=1 />
+
+
+
+        <label for="SportsFacility">SportsFacility:</label>
+        <input type="hidden" name="SportsFacility" value=0 />
+        <input type="checkbox" name="SportsFacility" value=1 />
+
+        <br><br>
+
+        <label for="ATM">ATM:</label>
+        <input type="hidden" name="ATM" value=0 />
+        <input type="checkbox" name="ATM" value=1 />
+
+
+
+        <label for="ClubHouse">Club House:</label>
+        <input type="hidden" name="ClubHouse" value=0 />
+        <input type="checkbox" name="ClubHouse" value=1 />
+
+
+
+        <label for="School">School:</label>
+        <input type="hidden" name="School" value=0 />
+        <input type="checkbox" name="School" value=1 />
+
+        <br><br>
+
+        <label for="24X7Security">24X7 Security:</label>
+        <input type="hidden" name="24X7Security" value=0 />
+        <input type="checkbox" name="24X7Security" value=1 />
+
+
+
+        <label for="PowerBackup">Power Backup:</label>
+        <input type="hidden" name="PowerBackup" value=0 />
+        <input type="checkbox" name="PowerBackup" value=1 />
+
+
+
+        <label for="CarParking">Car Parking:</label>
+        <input type="hidden" name="CarParking" value=0 />
+        <input type="checkbox" name="CarParking" value=1 />
+
+        <br><br>
+
+        <label for="StaffQuarter">Staff Quarter:</label>
+        <input type="hidden" name="StaffQuarter" value=0 />
+        <input type="checkbox" name="StaffQuarter" value=1 />
+
+
+
+        <label for="Cafeteria">Cafeteria:</label>
+        <input type="hidden" name="Cafeteria" value=0 />
+        <input type="checkbox" name="Cafeteria" value=1 />
+
+
+
+        <label for="MultipurposeRoom">Multipurpose Room:</label>
+        <input type="hidden" name="MultipurposeRoom" value=0 />
+        <input type="checkbox" name="MultipurposeRoom" value=1 />
+
+        <br><br>
+
+        <label for="Hospital">Hospital:</label>
+        <input type="hidden" name="Hospital" value=0 />
+        <input type="checkbox" name="Hospital" value=1 />
+
+
+
+        <label for="WashingMachine">Washing Machine:</label>
+        <input type="hidden" name="WashingMachine" value=0 />
+        <input type="checkbox" name="WashingMachine" value=1 />
+
+
+
+        <label for="Gasconnection">Gas Connection:</label>
+        <input type="hidden" name="Gasconnection" value=0 />
+        <input type="checkbox" name="Gasconnection" value=1 />
+
+        <br><br>
+
+        <label for="AC">AC:</label>
+        <input type="hidden" name="AC" value=0 />
+        <input type="checkbox" name="AC" value=1 />
+
+
+
+        <label for="Wifi">Wifi:</label>
+        <input type="hidden" name="Wifi" value=0 />
+        <input type="checkbox" name="Wifi" value=1 />
+
+
+
+        <label for="Children playarea">Children playarea:</label>
+        <input type="hidden" name="Children playarea" value=0 />
+        <input type="checkbox" name="Children playarea" value=1 />
+
+        <br><br>
+
+        <label for="LiftAvailable">Lift Available:</label>
+        <input type="hidden" name="LiftAvailable" value=0 />
+        <input type="checkbox" name="LiftAvailable" value=1 />
+
+
+
+        <label for="BED">BED:</label>
+        <input type="hidden" name="BED" value=0 />
+        <input type="checkbox" name="BED" value=1 />
+
+
+
+        <label for="VaastuCompliant">Vaastu Compliant:</label>
+        <input type="hidden" name="VaastuCompliant" value=0 />
+        <input type="checkbox" name="VaastuCompliant" value=1 />
+
+        <br><br>
+
+        <label for="Microwave">Microwave:</label>
+        <input type="hidden" name="Microwave" value=0 />
+        <input type="checkbox" name="Microwave" value=1 />
+
+
+
+        <label for="GolfCourse">Golf Course:</label>
+        <input type="hidden" name="GolfCourse" value=0 />
+        <input type="checkbox" name="GolfCourse" value=1 />
+
+
+
+        <label for="TV">TV:</label>
+        <input type="hidden" name="TV" value=0 />
+        <input type="checkbox" name="TV" value=1 />
+
+        <br><br>
+
+        <label for="DiningTable">Dining Table:</label>
+        <input type="hidden" name="DiningTable" value=0 />
+        <input type="checkbox" name="DiningTable" value=1 />
+
+
+
+        <label for="Sofa">Sofa:</label>
+        <input type="hidden" name="Sofa" value=0 />
+        <input type="checkbox" name="Sofa" value=1 />
+
+
+
+        <label for="Wardrobe">Wardrobe:</label>
+        <input type="hidden" name="Wardrobe" value=0 />
+        <input type="checkbox" name="Wardrobe" value=1 />
+
+        <br><br>
+
+        <label for="Refrigerator">Refrigerator:</label>
+        <input type="hidden" name="Refrigerator" value=0 />
+        <input type="checkbox" name="Refrigerator" value=1 />
+
+
+        <br><br>
+
+            <input class="home_submit" type="submit" value="See Price">
+
+
+        
+
+    </form>
+
+    <h1>Thankyou!</h1>
+
+</body>
+
+
+
+</html>

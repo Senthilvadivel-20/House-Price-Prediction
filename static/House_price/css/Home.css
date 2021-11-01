@@ -1,0 +1,64 @@
+body{
+    text-align: center;
+    /* background: #649173; 
+    background: -webkit-linear-gradient(to right, #DBD5A4, #649173);  
+    background: linear-gradient(to right, #DBD5A4, #649173); 
+ */
+    background-image: url('https://images.wallpaperscraft.com/image/single/mountains_solitude_house_124060_3840x2160.jpg');
+    background-size: cover;
+}
+
+h1{
+  font-family:cursive;
+}
+
+#Area{
+  width: 150px;
+  height: 20px;
+}
+
+#No._of_Bedrooms{
+  width: 100px;
+}
+
+form{
+  padding: 4% 0%;
+  margin:0% 10%;
+  background-color: rgba(245, 255, 250, 0.404);
+}
+
+
+label{
+    font-weight: bold;
+    font-size: 30px;
+    padding-left: 8px;
+    color: black;
+    font-family:'Times New Roman', Times, serif;
+}
+
+input{
+  width: 30px;
+  height: 20px;
+}
+
+
+
+  
+input.home_submit{
+    font-family: cursive;
+    width: 80px;
+    height: 50px;
+    background-color: rgb(49, 179, 77);
+    color: black;
+    border: none;
+    border-radius: 8px;
+
+  }
+  
+input.home_submit:hover{
+    width: 150px;
+    height: 70px;
+    font-size: 30px;
+    background-color: rgb(37, 211, 75);
+    cursor: pointer;
+  }
