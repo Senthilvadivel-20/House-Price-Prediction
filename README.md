@@ -2,5 +2,5 @@
 
 Web Page
 
-![home](img/home.jpg)
+![home](img/Home.jpg)
 !
